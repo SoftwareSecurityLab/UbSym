@@ -1,5 +1,5 @@
 # UbSym
-UbSym attempts to improve the efficiency of symbolic execution technique and use it to detect a group of memory corruption vulnerabilities in binary programs. Instead of applying symbolic execution to the whole program, this tool initially determines a program test unit, probably containing vulnerability, using static analysis and based on the defined specifications for memory corruption vulnerabilities. Then the constraint tree of the program unit is extracted using symbolic execution so that every node in this constraint tree contains the desired path and vulnerability constraints. Finally, using the curve fitting technique and treatment learning, the system inputs are estimated consistent with these constraints. Thus, new inputs are generated that reach the vulnerable instructions in the desired unit from the beginning of the program and cause vulnerability aactivation in those instructions.
+UbSym attempts to improve the efficiency of symbolic execution technique and use it to detect a group of memory corruption vulnerabilities in binary programs. Instead of applying symbolic execution to the whole program, this tool initially determines a program test unit, probably containing vulnerability, using static analysis and based on the defined specifications for memory corruption vulnerabilities. Then the constraint tree of the program unit is extracted using symbolic execution so that every node in this constraint tree contains the desired path and vulnerability constraints. Finally, using the curve fitting technique and treatment learning the system inputs are estimated consistent with these constraints. Thus, new inputs are generated that reach the vulnerable instructions in the desired unit from the beginning of the program and cause vulnerability aactivation in those instructions.
 
 Analysis Steps of UbSym
 ------------
@@ -38,13 +38,14 @@ Everything is completed. Now you can test your desired code using our tool. We p
 -h or --help        HELP
 -b or --binary      BINARY     [The Name of Binary File You Want to Analyze]
 -p or --prototype   PROTOTYPE  [The Prototype of Test Unit You Want to Analyze]
--t or --type   PROTOTYPE  [The Prototype of Test Unit You Want to Analyze]
+-t or --type        TYPE       [The Type of Vulnerabilities You want to Detect]
 -s or --sizes       SIZES      [The Size of Test Unit Arguments]
 -a or --args        ARGS       [The Indexes of Argv Passed to The Test Unit As Function Arguments]
 -S or --solo        SOLO       [The Solo Mode Avoids Executing Nested Functions in Unit Symbolically]
 ```
 ### Testing Executable Code Using Heap Overflow Detection Tool
 Not completed yet!
+
 We wish you happy testing!😄
 
 Known Issues
