@@ -50,7 +50,7 @@ We wish you happy testing!😄
 
 Known Issues
 ------------
-You may get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer does not have enough space to hold the generated input. In this situation, you have to increase the value of parameters in the [`config.py`](https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/Project_Files/source/config.py) file.
+You may get the message "node i is not satisfiable" since the detection tool can not generate appropriate input data if the symbolic buffer does not have enough space to hold the generated input. In this situation, you have to increase the value of parameters `BUF_SYMBOLIC_BYTES` and `MAX_STR_LEN` in the [`VTree.py`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/analysis/VTree.py) file.
 
 ## Authors
 * **Sara Baradaran** - [SaraBaradaran](https://github.com/SaraBaradaran)
