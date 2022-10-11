@@ -44,14 +44,12 @@ Everything is completed. Now you can test your desired code using our tool. We p
 -S or --solo        SOLO       [The Solo Mode Avoids Executing Nested Functions in Unit Symbolically]
 ```
 ### Testing Executable Code Using Heap Overflow Detection Tool
-You can see possibly vulnerable units in a binary program:
+You can see possibly vulnerable units contaning double-free vulnerability in a binary program:
 ```
-cp tests/includes/
-gcc ./tests/CWE415_Double_Free/CWE415_Double_Free__malloc_free_int/CWE415_Double_Free__malloc_free_int_01.c -o program 
 chmod +x run.py; ./run.py -b program -t DF
 ```
 For example, you want to analyze the function "CWE415_Double_Free__malloc_free_int_01_bad" as a vulnerable unit:<br />
-We need one argument with the maximum length of 100 as the input "argv", which activate the possible vulnerabilities in the "CWE415_Double_Free__malloc_free_int_01_bad" unit, so we use `-s 100` for the sizes option and `-a 1` for the args option.
+We need one argument with the maximum length of 100 as the input "argv", making the possible vulnerability active in the "CWE415_Double_Free__malloc_free_int_01_bad" unit, so we use `-s 100` for the sizes option and `-a 1` for the args option.
 ```
 ./run.py -b program -t DF -p 'void CWE415_Double_Free__malloc_free_int_01_bad(char*)' -s 100 -a 1
 ```
