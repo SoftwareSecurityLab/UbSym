@@ -21,7 +21,7 @@ sudo apt-get install virtualenv
 virtualenv -p /usr/bin/python3 env
 source env/bin/activate
 ```
-### Step 2: Cloning Files to Use Heap Overflow Detection Tool
+### Step 2: Cloning Files to Use UbSym
 ```
 git clone https://github.com/SoftwareSecurityLab/UbSym
 ```
@@ -30,7 +30,7 @@ Now install project requirements using `requirements.txt` file:
 ```
 pip install -r requirements.txt
 ```
-Running The Tests
+Running Tests Cases
 ------------
 Everything is completed. Now you can test your desired code using our tool. We put some test cases from the [NIST SARD](https://samate.nist.gov/SRD/) benchmark vulnerable programs in this repository by which you can test our vulnerability detection tool.
 ### Options
@@ -43,7 +43,7 @@ Everything is completed. Now you can test your desired code using our tool. We p
 -a or --args        ARGS       [The Indexes of Argv Passed to The Test Unit As Function Arguments]
 -S or --solo        SOLO       [The Solo Mode Avoids Executing Nested Functions in Unit Symbolically]
 ```
-### Testing Executable Code Using Heap Overflow Detection Tool
+### Testing UbSym
 You can see possibly vulnerable units contaning double-free vulnerability in a binary program:
 ```
 chmod +x run.py; ./run.py -b program -t DF
@@ -52,6 +52,11 @@ For example, you want to analyze the function "CWE415_Double_Free__malloc_free_i
 We need one argument with the maximum length of 100 as the input "argv", making the possible vulnerability active in the "CWE415_Double_Free__malloc_free_int_01_bad" unit, so we use `-s 100` for the sizes option and `-a 1` for the args option.
 ```
 ./run.py -b program -t DF -p 'void CWE415_Double_Free__malloc_free_int_01_bad(char*)' -s 100 -a 1
+```
+### Results
+Run [`benchmarks_running.py`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/benchmarks_running.py) file to analyze all programs of tests directory.
+```
+chmod +x benchmarks_running.py; ./benchmarks_running.py
 ```
 We wish you happy testing!😄
 
