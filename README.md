@@ -46,6 +46,7 @@ Everything is completed. Now you can test your desired code using our tool. We p
 ### Testing Executable Code Using Heap Overflow Detection Tool
 You can see possibly vulnerable units in a binary program:
 ```
+cp tests/includes/
 gcc ./tests/CWE415_Double_Free/CWE415_Double_Free__malloc_free_int/CWE415_Double_Free__malloc_free_int_01.c -o program 
 chmod +x run.py; ./run.py -b program -t DF
 ```
