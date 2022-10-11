@@ -54,8 +54,9 @@ We need one argument with the maximum length of 100 as the input "argv", making 
 ./run.py -b program -t DF -p 'void CWE415_Double_Free__malloc_free_int_01_bad(char*)' -s 100 -a 1
 ```
 ### Results
-Run [`benchmarks_running.py`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/benchmarks_running.py) file to analyze all programs of tests directory.
+Compile programs using [`executable.sh`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/tests/executable.txt) script and run [`benchmarks_running.py`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/benchmarks_running.py) file to analyze all programs of tests directory.
 ```
+chmod +x ./tests/executable.sh; ./tests/executable.sh
 chmod +x benchmarks_running.py; ./benchmarks_running.py
 ```
 We wish you happy testing!😄
