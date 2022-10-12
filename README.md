@@ -8,6 +8,12 @@ Analysis Steps of UbSym
 * Monte Carlo Simulation and Curve Fitting
 * Detecting Vulnerability and Generating Appropriate Inputs for Activating of the Vulnerability
 
+## Supported Vulnerabilities
+- [x] Heap-Based Buffer Overflow
+- [x] Stack-Based Buffer Overflow
+- [x] Double-Free
+- [x] Use-After-Free
+
 ## Requirements
 - Python3
 - angr Framework ([Installation](https://angr.io))
@@ -49,12 +55,12 @@ You can see possibly vulnerable units contaning double-free vulnerability in a b
 chmod +x run.py; ./run.py -b program -t DF
 ```
 For example, you want to analyze the function "CWE415_Double_Free__malloc_free_int_01_bad" as a vulnerable unit:<br />
-We need one argument with the maximum length of 100 as the input "argv", making the possible vulnerability active in the "CWE415_Double_Free__malloc_free_int_01_bad" unit, so we use `-s 100` for the sizes option and `-a 1` for the args option.
+We need one argument with the maximum length of 100 bytes as the input "argv", making the possible vulnerability active in the "CWE415_Double_Free__malloc_free_int_01_bad" unit, so we use `-s 100` for the sizes option and `-a 1` for the args option.
 ```
 ./run.py -b program -t DF -p 'void CWE415_Double_Free__malloc_free_int_01_bad(char*)' -s 100 -a 1
 ```
 ### Results
-Compile programs using [`executable.sh`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/tests/executable.txt) script and run [`benchmarks_running.py`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/benchmarks_running.py) file to analyze all programs of tests directory.
+Compile programs using [`executable.sh`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/tests/executable.sh) script and run [`benchmarks_running.py`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/benchmarks_running.py) file to analyze all programs of tests directory.
 ```
 chmod +x ./tests/executable.sh; ./tests/executable.sh
 chmod +x benchmarks_running.py; ./benchmarks_running.py
