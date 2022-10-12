@@ -86,6 +86,6 @@ We have tested our project on Ubuntu 18.04.1 LTS.
 
 <div align="center">
   <a href="https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection">
-    <img src="https://raw.githubusercontent.com/SaraBaradaran/Heap-Overflow-Detection/main/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01_bad.png" alt="CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01_bad" width="1100">
+    <img src="https://github.com/SoftwareSecurityLab/Heap-Overflow-Detection/blob/main/CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01_bad.png" alt="CWE122_Heap_Based_Buffer_Overflow__c_CWE193_char_cpy_01_bad" width="1100">
   </a>
 </div>
