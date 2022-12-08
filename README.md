@@ -62,8 +62,12 @@ We need one argument with the maximum length of 100 bytes as the input "argv", m
 ### Results
 Compile programs using [`executable.sh`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/tests/executable.sh) script and run [`benchmarks_running.py`](https://github.com/SoftwareSecurityLab/UbSym/blob/main/benchmarks_running.py) file to analyze all programs of tests directory.
 ```
-chmod +x ./tests/executable.sh; ./tests/executable.sh
-chmod +x benchmarks_running.py; ./benchmarks_running.py
+chmod +x ./tests/executable.sh
+cd tests
+./executable.sh
+cd ..
+chmod +x benchmarks_running.py; 
+./benchmarks_running.py
 ```
 We wish you happy testing!😄
 
