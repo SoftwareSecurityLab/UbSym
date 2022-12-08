@@ -12,7 +12,7 @@ from analysis.VulAnalyzer import VulAnalyzer
 import sys, os
 sys.setrecursionlimit(2000)
 
-for i in  range(153, 226):
+for i in  range(1, 226):
     print('===================')
     print("| Program No.: " + str(i))
     print('===================')
