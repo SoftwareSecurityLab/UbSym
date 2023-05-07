@@ -1,6 +1,8 @@
 # UbSym
 UbSym attempts to improve the efficiency of symbolic execution technique and use it to detect a group of memory corruption vulnerabilities in binary programs. Instead of applying symbolic execution to the whole program, this tool initially determines a program test unit, probably containing vulnerability, using static analysis and based on the defined specifications for memory corruption vulnerabilities. Then the constraint tree of the program unit is extracted using symbolic execution so that every node in this constraint tree contains the desired path and vulnerability constraints. Finally, using the curve fitting technique and treatment learning the system inputs are estimated consistent with these constraints. Thus, new inputs are generated that reach the vulnerable instructions in the desired unit from the beginning of the program and cause vulnerability aactivation in those instructions.
 
+For more information, see the paper ["A unit-based symbolic execution method for detecting memory corruption vulnerabilities in executable codes"](https://link.springer.com/article/10.1007/s10207-023-00691-1) published in the International Journal of Information Security.
+
 Analysis Steps of UbSym
 ------------
 * Static Analysis on x64 Binary Codes for Finding Possibly Vulnerable Units
