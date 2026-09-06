@@ -3,6 +3,20 @@ UbSym attempts to improve the efficiency of symbolic execution technique and use
 
 For more information, see the paper ["A unit-based symbolic execution method for detecting memory corruption vulnerabilities in executable codes"](https://link.springer.com/article/10.1007/s10207-023-00691-1) published in the International Journal of Information Security.
 
+If you use this tool in your research, please cite our paper as follows:
+```
+@article{baradaran2023unit,
+  title={A unit-based symbolic execution method for detecting memory corruption vulnerabilities in executable codes},
+  author={Baradaran, Sara and Heidari, Mahdi and Kamali, Ali and Mouzarani, Maryam},
+  journal={International Journal of Information Security},
+  volume={22},
+  number={5},
+  pages={1277--1290},
+  year={2023},
+  publisher={Springer}
+}
+```
+
 Analysis Steps of UbSym
 ------------
 * Static Analysis on x64 Binary Codes for Finding Possibly Vulnerable Units
